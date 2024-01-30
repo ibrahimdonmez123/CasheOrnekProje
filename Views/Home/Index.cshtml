@@ -1,0 +1,9 @@
+﻿@model DateTime?
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h3>Mevcut saat: @DateTime.Now.TimeOfDay.ToString()</h3>
+    <h3>Önbellekli saat : @(Model == null ? "Önbelek'te veri yok" : Model.Value.TimeOfDay.ToString())</h3>
+</div>
